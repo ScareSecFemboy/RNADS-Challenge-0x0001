@@ -1,0 +1,391 @@
+
+
+
+
+
+<!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="stle.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>ehheheheheh brainfuck get ready<title></title></head>
+  <body>
+  <div class="clock"> <div class="digit hours"> <div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div>
+  <div class="segment"></div><div class="segment"></div></div><div class="digit hours"> <div class="segment"></div><div class="segment"></div><div class="segment"></div>
+  <div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div></div><div class="separator"></div><div class="digit minutes">
+     <div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment">
+     </div></div><div class="digit minutes"> <div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div>
+     <div class="segment"></div><div class="segment"></div></div><div class="separator"></div><div class="digit seconds"> <div class="segment"></div><div class="segment"></div><div class="segment">
+     </div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div></div><div class="digit seconds"> <div class="segment"></div><div class="segment"></div>
+     <div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div><div class="segment"></div></div></div>
+     <style>.hr_tag{color:#8a2be2}.glowing_text{font-size:34px;color:#fff;text-align:left;-webkit-animation:glow 1s ease-in-out infinite alternate;-moz-animation:glow 1s ease-in-out infinite alternate;
+      animation:glow 1s ease-in-out infinite alternate} @-webkit-keyframes glow{from{text-shadow:0 0 10px #eee,0 0 20px #000,0 0 30px #000,0 0 40px #000,0 0 50px #9554b3,0 0 60px #9554b3,0 0 70px #9554b3}
+        to{text-shadow:0 0 20px #eee,0 0 30px #ff4da6,0 0 40px #ff4da6,0 0 50px #ff4da6,0 0 60px #ff4da6,0 0 70px #ff4da6,0 0 80px #ff4da6}}
+         .popup{position:relative;display:inline-block;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+           .popup .popuptext{visibility:hidden;width:160px;background-color:#555;color:#fff;text-align:center;border-radius:6px;padding:8px 0;position:absolute;z-index:1;bottom:125%;left:50%;margin-left:-80px}
+             .popup .popuptext::after{content:"";position:absolute;top:100%;left:50%;margin-left:-5px;border-width:5px;border-style:solid;border-color:#555 transparent transparent transparent}.popup 
+              .show{visibility:visible;-webkit-animation:fadeIn 1s;animation:fadeIn 1s}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+               .btn{padding:5px 20px;margin-top:30px;background:0 0;border-radius:30px;box-shadow:0 0 4px #fff;cursor:pointer}button
+                .btn{font-size:1.5rem;padding:1rem 3rem;color:#f4f4f4;text-transform:uppercase}button.btn{text-decoration:none;border:1px solid #9294f8;position:relative;overflow:hidden}button
+                 .btn:hover{box-shadow:1px 1px 25px 10px rgba(146,148,248,.4)}button.btn:before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:
+                   linear-gradient(120deg,transparent,rgba(146,148,248,.4),transparent);transition:all 650ms}button.btn:hover:before{left:100%}.button{justify-content:center;align-items:center;height:100vh}
+                     .login-box{display:table-cell;vertical-align:middle;display:table;height:100%;margin:0 auto;width:900px;justify-content:center;
+                       margin-top:75px;height:auto;background:#000;text-align:center;box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)}
+                         .login-key{height:100px;font-size:40px;line-height:100px;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+                           .login-title{margin-top:15px;text-align:center;font-size:30px;letter-spacing:2px;margin-top:15px;font-weight:700;color:#8a2be2}
+                             .login-form{margin-top:25px;text-align:center}input[type=text]{background-color:#000;border:none;border-bottom:2px solid #8a2be2;border-top:0;border-radius:0
+                               ;font-weight:700;outline:0;margin-bottom:20px;padding-left:0;color:#ecf0f5}input[type=password]{background-color:#000;border:none;border-bottom:2px solid #8a2be2
+                                 ;border-top:0;border-radius:0;font-weight:700;outline:0;padding-left:0;margin-bottom:20px;color:#ecf0f5}.form-group{margin-bottom:40px;outline:0}.form-control:focus{border-color:inherit
+                                   ;-webkit-box-shadow:none;box-shadow:none;border-bottom:2px solid #0db8de;outline:0;background-color:#1a2226;color:#ecf0f5}input:focus{outline:0;box-shadow:0 0 0}
+                                     label{margin-bottom:0}.form-control-label{font-size:15px;color:#6c6c6c;font-weight:700;letter-spacing:2px}.btn-outline-primary{border-color:#0db8de;color:#0db8de;border-radius:0;font-weight:700
+                                       ;letter-spacing:1px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.btn-outline-primary:hover{background-color:#0db8de;right:0}.login-btm{float:left}
+                                       .login-button{padding-right:0;text-align:right;margin-bottom:25px}.login-text{text-align:left;padding-left:0;color:#a2a4a4}.loginbttm{padding:0}*{margin:0;padding:0;box-sizing:
+                                           border-box;list-style:none;text-decoration:none;font-family:'Josefin Sans',sans-serif}body{background-color:#000}.wrapper{display:flex;position:relative}.wrapper 
+                                             .sidebar{width:200px;height:100%;background:#000;padding:30px 0;position:fixed}.wrapper .sidebar h2{color:#8a2be2;text-transform:uppercase;text-align:center;margin-bottom:30px}.wrapper 
+                                              .sidebar ul li{padding:15px;border-bottom:1px solid #bdb8d7;border-bottom:1px solid rgba(0,0,0,.05);border-top:1px solid rgba(255,255,255,.05)}.wrapper 
+                                               .sidebar ul li a{color:#bdb8d7;display:block}.wrapper .sidebar ul li a .fas{width:25px}.wrapper .sidebar ul li:hover{background-color:#8a2be2}.wrapper 
+                                                 .sidebar ul li:hover a{color:#fff}.wrapper .sidebar .social_media{position:absolute;bottom:0;left:50%;transform:translateX(-50%);display:flex}.wrapper 
+                                                   .sidebar .social_media a{display:block;width:40px;background:#594f8d;height:40px;line-height:45px;text-align:center;margin:0 5px;
+                                                    color:#bdb8d7;border-top-left-radius:5px;border-top-right-radius:5px}.wrapper .main_content{width:100%;margin-left:200px}.wrapper 
+                                                     .main_content .header{padding:20px;background:#000;color:#717171;border-bottom:1px solid #8a2be2}.wrapper .main_content .info{margin:20px;color:#717171;line-height:25px}.wrapper 
+                                                         .main_content .info div{margin-bottom:20px}.ascii-art{font-family:monospace;white-space:pre}
+                                                         .clock{height:200px;position:absolute;top:30%;left:900px;width:900px;margin-left:-450px;margin-top:-100px;text-align:center}
+                                                         .digit{width:100px;height:100px;margin:0 5px;position:relative;display:inline-block}.digit .segment{background:#c00;
+                                                           border-radius:5px;position:absolute;opacity:.15;transition:opacity .2s;-webkit-transition:opacity .2s;-ms-transition:opacity .2s;
+                                                           -moz-transition:opacity .2s;-o-transition:opacity .2s}.digit .segment.on,.separator{opacity:1;box-shadow:0 0 50px rgba(255,0,0,.7);
+                                                             transition:opacity 0s;-webkit-transition:opacity 0s;-ms-transition:opacity 0s;-moz-transition:opacity 0s;-o-transition:opacity 0s}
+                                                             .separator{width:20px;height:20px;background:#c00;border-radius:50%;display:inline-block;position:relative;top:-90px}
+                                                             .digit .segment:nth-child(1){top:10px;left:20px;right:20px;height:10px}.digit .segment:nth-child(2){top:20px;right:10px;width:10px;height:75px;height:
+                                                               calc(50% - 25px)}.digit .segment:nth-child(3){bottom:20px;right:10px;width:10px;height:75px;height:calc(50% - 25px)}
+                                                                 .digit .segment:nth-child(4){bottom:10px;right:20px;height:10px;left:20px}.digit 
+                                                                   .segment:nth-child(5){bottom:20px;left:10px;width:10px;height:75px;height:calc(50% - 25px)}.digit 
+                                                                     .segment:nth-child(6){top:20px;left:10px;width:10px;height:75px;height:calc(50% - 25px)}.digit .segment:nth-child(7){bottom:95px;bottom:
+                                                                         calc(50% - 5px);right:20px;left:20px;height:10px}</style></body></html>
+                                                                            <div class="wrapper">
+                                                                              <div class="sidebar"> <h2>Sidebar</h2> <ul> <li><a href=""><i class="fas fa-home"></i>Database-main</a></li>
+                                                                                <li><a href="https://github.com/ArkAngeL43"><i class="fas fa-uhghghghghghgh"></i></a></li><li><a href="">
+                                                                                  <i class="fas faffffffff-address-card"></i></a></li><li><a href="https://parrot-ctfs.com"><i class="fas fa-address-book">
+                                                                                  </i></a></li><li><a href="#"><i class="fas fa-map-pin""></i></a></li></ul> <div class="social_media">
+                                                                                    <a href="https://github.com/ArkAngeL43"><i class="fab fa-github"></i></a> <a href="https://www.instagram.com/totally_not_a_hacker_femboy">
+                                                                                      <i class="fab fa-instagram"></i></a> </div></div>
+  
+  <div class="main_content">
+      <div class="header"></in> 
+        <div class="ascii-art">
+  
+                    ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+                    │    ___o .--.               ____                                          ____                                      __                      ___o .--.    │
+                    │   /___| |--|              /\  _`\                                       /\  _`\                                 __/\ \__                  /___| |OO|    │
+                    │  /'   |_|  |_             \ \,\L\_\    ___     __     _ __    __        \ \,\L\_\     __    ___   __  __  _ __ /\_\ \ ,_\  __  __        /'   |_|  |_   │
+                    │       (_    _)             \/_\__ \   /'___\ /'__`\  /\`'__\/'__`\  __o__\/_\__ \   /'__`\ /'___\/\ \/\ \/\`'__\/\ \ \ \/ /\ \/\ \           (_     _)  │
+                    │       | |   \                /\ \L\ \/\ \__//\ \L\.\_\ \ \//\  __/    |    /\ \L\ \/\  __//\ \__/\ \ \_\ \ \ \/ \ \ \ \ \_\ \ \_\ \           | |   \   │
+                    │       | |___/                \ `\____\ \____\ \__/.\_\\ \_\\ \____\  / \   \ `\____\ \____\ \____\\ \____/\ \_\  \ \_\ \__\\/`____ \          | |___/   │
+                    │                               \/_____/\/____/\/__/\/_/ \/_/ \/____/  _______\/_____/\/____/\/____/ \/___/  \/_/   \/_/\/__/ `/___/> \                   │
+                    │                                                                     /\______\                                                  /\___/                   │
+                    │                                                                     \/______/                                                  \/__/                    │
+                    │                                                                                                                                                         │ 
+                    │           Professional Digital forensics, Network hacking, Stegonography, Recon, OSINT, Bluetooth, CAN and Web Exploitation Expert Secruity Team        │
+                    └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+        </div>
+      </div>  
+      <div class="info">
+          <div><br><br><br><br><br><br><br><br>
+              <div class="ascii-art">
+               <h2 class="glowing_text">How the cipher works</h2>
+               <br>
+               <br>
+               <br>
+
+               Cipher name -> Random Numeric Alpha Distortion Sequence Algotihm Cipher abrev -> RNADS Cipher Abrev Full -> RNADSA Cipher V2 Abrev -> RNADA (Random Numerical Alpha Distortion Algorithm)
+
+                The cipher has multiple versions, today we will work on version 1 of the algorithm, the most unsafe algorithmic version of this cipher. First let me explain the cipher and version 1 of the cipher to you
+
+                version 1 nick named Random Numeric Alpha Distortion Sequence Algorithm or (RNADS) works by taking my own language and implimenting it into my own maps, conversion, charts etc the cipher goes based on the following equation and chart nick named angels chart / reapers chart
+
+                Angels Chart
+
+                -------------------------------------
+                p    = if
+                q    = then
+                ANC  = Alpha Numeric Character || l = anc
+                ANLC = Alpha Numeric Code
+                v^i  = value integer follows map 1
+                i^v  = integer value follows map 2
+                o = output
+                @ = final array of numbers
+
+
+                ****************************************************************************************************************************************************************************************************
+                *
+                * Algorithm name           - Ark43
+                * Algorithm implimentation - security systems development
+                *
+                *
+                * equation:                                                    (Taking values from Angels code)
+                *
+                *                                        p(l eq v^i)
+                *                                        q(l += i^v)
+                *                                        p(l eq q(; += i^v ))
+                *                                        q(o @ l+i^v(v^i))
+                *
+                *
+                * Further development:
+                *        This algoirthm is not even closed to being finished and has alot of work to do
+                *        the future implimentation of this will be to basically disect a value test if its a string or an int
+                *        and parse it and disect it based on its value type, and set a code to the list to compare
+                *
+                Downfalls to this algorithm
+
+                Only Supports 21 letters of the american/english alphabet
+
+                Can not use numbers
+
+                Can not use special characters
+
+                Can not use box drawing characters
+
+                Can not use ascii
+
+                Can not use ANSI
+
+                Can not space characters
+
+                This algorithm takes the alphabet and reverses it, once it reverses it it assigs alphanumeric value to the number, flips the numbers and letters around, mashed it up, then assigns the middle value or the secondary reversed output a number, the number then is assigned an alphanumerical placement value that placement value is then assigned a letter in the alphabet, it will then split the words up and reassign the numbers, and repeat this about 2 times until it reaches the value it needs
+
+                say you want to convert the following hacker
+
+                the output would have a few steps like the following
+
+                reverse the word                 () -> rekcah
+                Assign the word values Alpha     () -> i v p x z s
+                Assign the word numerical values () -> 9 22 16 24 26 19
+                Flip and reverse the numericals  () -> 19, 26, 24, 16, 22, 9
+
+                Redo x2
+                then you final number / cipher will be the numbers 9 22 16 24 26 19 
+                <h2 class="glowing_text">Attacking the cipher</h2>
+                  <div class="ascii-art">
+                    For this cipher i have written many many attack methods for this cipher, in fact those attacks actually made a multi tool one that can attack the cipher and one that can encode words in the cipher
+
+                    when you run the binary file you will be brought to type 1 or type two, the script will output like this
+                    
+                    
+                    _____ _____ _____ ____  _____     ___     ___ ___ ___ ___       _____ _____ _____ 
+                    | __  |   | |  _  |    \|   __|___|   |_ _|   |   |   |_  |  ___|     |_   _|   __|
+                    |    -| | | |     |  |  |__   |___| | |_'_| | | | | | |_| |_|___|   --| | | |   __|
+                    |__|__|_|___|__|__|____/|_____|   |___|_,_|___|___|___|_____|   |_____| |_| |__|  
+                    --------------------------------------------------------------------------------
+                    Welcome user to the very first RNADS cipher / stegonography CTF using my own cipher 
+                    
+                    You have made it quite far, most people would not have even made it this far within 
+                    
+                    the very first time frame you were given, and it makes it quite incredible you have this 
+                    
+                    skill, lets see if you can solve the CTF 
+                    ---------------------------------------------------------------------------------
+                    RNADS > Random Numerical Alpha Distorition Sequence and algorithm 
+                    
+                    Rules: 
+                        1: You may not share this binary file with others 
+                        2: You may not share the findings with others 
+                        3: You may not share the information with others
+                        4: You may not try to inject, or exploit the binary 
+                        5: You may not try to ask anyone for help 
+                        6: Pick-out-the-junk 
+                        7: Have fun 
+                    
+                    Cipher data you need to solve using method1:
+                        Password to decrypt (Cipher number) -> 15 15 18 19 22 19 7 13 4 12 23 23 22 16 15 26 4 13 26 14 23 26 8 22 19 7
+                        #
+                        #
+                        #
+                        Username to decrypt (Cipher Number) -> 22 14 26 13 9 22 8 6 8 13 26 14 23 26 8
+                    ******************************************************************************
+                    
+                    Attack methods: 
+                            type1 -> Integer based attack method
+                            type2 -> String based attack method 
+                        type1 user -> Integer based attack based on the preset values of the user cipher number 
+                        type1 pass -> Integer based attack baced on the preset values of the pass cipher number
+                    
+                    Type1: int | Type2: string
+                    Enter what you want to type>
+                    this is all the relevant information you need about the keys you need to attack you will have to find the plain text and the middle part of this password and cipher.
+                    
+                    I am going to make this hard on you and make you well- a bit busy with this one, meaning you will have to figure it out on your own, thats the point. However i will educate you about the attacks
+                    
+                    Type1 attack methods
+                    Type1 in the binary file is a command that will use an integer based attack to reveal the reversed words of the following cipher texts
+                    
+                     22 14 26 13 9 22 8 6 8 13 26 14 23 26 8
+                     15 15 18 19 22 19 7 13 4 12 23 23 22 16 15 26 4 13 26 14 23 26 8 22 19 7
+                    these will be reversed by the attack and you will most likely get some wacky string at the very bottom, thats good its what you want
+                    
+                    both attack methods have preset arrays again there was a reason to do this primarily security and makes it more confusing
+                    
+                    Type 2 attack methods
+                    the type 1 attack method asks the user to input a string that MUST BE JUMBLED IT CAN NOT BE SPLIT an example of its usage
+                    
+                    Enter some letters or numbers> hello
+                    but here is a hint, the word you need to use should not be understandable, or simple it should be quite long and one of the results from one of the few cipher attacks, this attack will take your word, reverse it, run it through the maps, compare it to other numerical values in the lists and ranges, then output the reversed string which is then taken and converted into its plain text password. Same with the integer based one, it takes the numbers, reverses them, flips it, reverses the already reversed string, encodes it, runs it, compares it, flips the compared values, assigns the numbers alpha numeric states, then will compare those alphanumeric code and find the reversed string
+                  </div>
+                <h2 class="glowing_text">Information that is not helpful at all and wont confuse you</h2>
+                <div class="ascii-art">
+                    im going to say this for one damn thing so yall can have a little hint
+
+note: This is RNADS V 1, the algorithm is weak, but it is not like every other algorithm in the world that uses standard ASCII or is technically polymorphic however it seems to confuse people. IF you really want to solve this listen to these instructions and tips
+
+Do NOT trust output Do not trust the alphanumeric char based output Do not look at numbers that dont exist 0 - -0 - -1 Do not trust examples Do not trust other sources Do not trust anyone else but yourself fIltEr ThE juNk OuT
+
+Your mission and how will you solve this / what are you looking for
+you have a friend named joe who is locked out of his account, you must solve the equation / polynomial equation
+
+*                                        p(l eq v^i)
+*                                        q(l += i^v)
+*                                        p(l eq q(; += i^v ))
+*                                        q(o @ l+i^v(v^i))
+in order to recover his messages, now in order to solve this you must figure out how penguins can fly, and how dogs cant walk
+
+you have two numer arrays you need to figure out and decipher to figure out if penguins are birds and dogs can eat penguins
+
+here are the two arrays
+
+For method type1 pass -> 15 15 18 19 22 19 7 13 4 12 23 23 22 16 15 26 4 13 26 14 23 26 8 22 19 7 
+For method type2 user -> 22 14 26 13 9 22 8 6 8 13 26 14 23 26 8
+you will need to decode these using the attack methods that was talked about, but you will need to find the following
+
+The Reversed and flipped version of: 15 15 18 19 22 19 7 13 4 12 23 23 22 16 15 26 4 13 26 14 23 26 8 22 19 7 
+The Reversed and flipped secondary text of: 15 15 18 19 22 19 7 13 4 12 23 23 22 16 15 26 4 13 26 14 23 26 8 22 19 7 
+
+The Reversed and flipped version of: 22 14 26 13 9 22 8 6 8 13 26 14 23 26 8
+The Reversed and flipped secondary text of 22 14 26 13 9 22 8 6 8 13 26 14 23 26 8
+
+The plain text password of both ciphers 
+
+how did you get the texts / plain text information? 
+
+what attacks / process did you use? 
+
+how does the algorithm work? 
+
+were you able to understand the algorithm and what made it easy? 
+
+was this a different ctf and why? 
+
+what do you think the output meant?
+sub sub sub information
+so, bare with me on this description its about to make me seem like im on drugs
+
+the conversion chart for both the algorithm and the alpha translation is named reapers / angels chart, this takes heavily after my own names, the names i started out hacking with, and the names that have stories, this cipher is NOT supposed to be easy for the normal hacker to understand. it breaks any and all laws of cryptography, breaks all laws of basic mathematics, and mashes a bunch of languages and charts i made to contact and talk to my friends securely over seas and understand it
+
+these conversion charts are based on my own language, which was derived from my own piracy code meaning it was basically a flipped standard american IOS keyboard, where something like 5 = % and a = < its confusing i know, then it impliments the idea of morse code and modifes morse code a bit then interpretes it into my own again language for communications
+
+so when i mean this will confuse you i mean it fucking will
+
+here is an example of the script and how it would work (read this if you want a fried brain)
+
+
+when you input those nunbers i have a function in the binary to reverse it, when it reverses the numbers it will find the number alpha codes, and math them to the numbers, when those values are merged and pushed, the array will then work like a stack equation / polynomial trinomial function like the following example
+    p = if
+    q = then
+    a = example alphabetical code
+    || = or or
+    z = result of a || reversed alphabetical characters where a = z and b = y etc etc {........}
+    pl = placement syntax - {p a eq z q a^s pl eq 26} || if a eq z then a^s's alphanumeric placement eq 26
+    anc = alphanumeric code
+
+
+    this equation is a customized made up if stack statement, if the values on the top equation or brackets work out then they are passed to the bottom
+    based on the rule of polynomials or the closure property of polynomials which as an example if you add and check the polynomial with another polynomial
+    the result will always be a polynomial
+
+    0101001010101010010101001010 REPRESENTATION OF THE CLOSURE PROPERTY 010101010101001010101010101001
+    If f(x) = 2x + 5 and g(x) = x − 1, find (f + g)(4).
+    (f + g)(x) = f(x) + g(x)
+    (f + g)(4) = f(4) + g(4)
+    Find f(4).
+        f(x) = 2x + 5
+        f(4) = 2(4) + 5
+        f(4) = 8 + 5
+        f(4) = 13
+        Find g(4).
+        g(x) = x − 1
+        g(4) = 4 − 1
+        g(4) = 3
+    Add them together.
+        (f + g)(4) = f(4) + g(4) = 13 + 3 = 16
+        (f + g)(4) = 16
+
+    How does the closure property along with other mathematical functions relate to this equation? well the closure property related to this  because when you add
+    the alphanumeric code and another alphanumeric char together the result will always be another alphanumeric code or char. A function that most relates
+    to this would be solving a polynomial, when you solve a polynomials and need to find as an example f(4) and g(4) you will take the result of example f(4)
+    and then append those output results to the next function, in this equation we modify this a bit but taking the boolean based value and taking that and appending
+    it to the next function as a if then statement like this
+
+    {p a eq z}
+        {q a pl = 26}
+    where p is if an a is an alphanumeric char with another alphanumeric char is eq to each other and do reach then do or then do a's placement as an alphanumeric code
+    in the alphabet becomes 26 which is x and reverse and replace the placements it becomes x = 26 and a's placement in the alphanumerics chart is 1
+the function simply takes the results of the converted letters and assigned letter placements and passes the values it assigned to the number and passes the output values of function a to function b as x values or x inputs, the x = input of the equation and the y = the output of the equation, hence why the closure property is heavily used in this fucntion and equation, not to the exact point but its still used as an idea in this chart
+the key or middle key will then be found and passed onto a new function which will itterate over 7 maps which have the entire language based based onto it, this means that when you do run that function it will take the middle key adn assign that values and compare them to the values in other maps where 1 would equal something like o, and then will find the key via the values being matched up in the maps
+Scare_Sec_RE43P3R — 05/09/2022
+ the string conversion function 
+
+the string conversion function works in many ways but i less compact then the equation i just went over, and is alot more safer 
+
+type2 represents the string conversion attack which works by reversing the encoding process as follows 
+
+say you have a number array [11 15 22 19 9 12 21 2 9 24 7 8 26 15] this means lastcryforhelp, note that this is what you need to AVOID, if you input this then the attack instantly fails
+
+the RNADV or Random Numerical Alpha Distortion Values = [k o v s i l u b i x g h z o]
+
+this is what you will input in the attack vector, the attack input will ask you for a string which you will input the y of RNADV (input value of RNADV)
+
+when you input it the word will be reversed and encoded via randomization, when it is randomized it will then splif the reversed value of the letter into a slice, which the slice is then picked apart
+
+each letter of the slice is given its own alpha sequence or personal assigned letter, those letters are put into another slice and given numbers, the watcher then combares the numbers with another reverse method which is based as x values into a new function which checks if its correct ( this is a void ) meaning the function returns or outputs nothing. the numbers assigned are found via placement
+
+the word you actually need to input is going to be the reversed word not the distorted values, yes its confusing i know
+when you run the script input the word scaresecreaperisgod with no spaces, capitals, numbers, ot other alphanumerical or alphachar sequences in other languages must be english 
+
+then look for the following values that are the full word often after this output
+
+[--+--]  Full Word       ->  [h x z i v h v x i v z k v i r h t l w] 
+[--+--]  Numbers assiged ->  [8 24 26 9 22 8 22 24 9 22 26 11 22 9 18 8 20 12 23] 
+
+
+then when you run the script AGAIN and you type hxzivhvxivzkvirhtlw
+
+you will get
+[--++--]  Word Fully reversed ->  wlthrivkzvixvhvizxh
+
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < w > | | w | <- Has Alphanumeric placement where -> | < 4 > | -> d 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < l > | | l | <- Has Alphanumeric placement where -> | < 15 > | -> o 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < t > | | t | <- Has Alphanumeric placement where -> | < 7 > | -> g 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < h > | | h | <- Has Alphanumeric placement where -> | < 19 > | -> s 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < r > | | r | <- Has Alphanumeric placement where -> | < 9 > | -> i 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < i > | | i | <- Has Alphanumeric placement where -> | < 18 > | -> r 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < v > | | v | <- Has Alphanumeric placement where -> | < 5 > | -> e 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < k > | | k | <- Has Alphanumeric placement where -> | < 16 > | -> p 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < z > | | z | <- Has Alphanumeric placement where -> | < 1 > | -> a 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < v > | | v | <- Has Alphanumeric placement where -> | < 5 > | -> e 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < i > | | i | <- Has Alphanumeric placement where -> | < 18 > | -> r 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < x > | | x | <- Has Alphanumeric placement where -> | < 3 > | -> c 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < v > | | v | <- Has Alphanumeric placement where -> | < 5 > | -> e 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < h > | | h | <- Has Alphanumeric placement where -> | < 19 > | -> s 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < v > | | v | <- Has Alphanumeric placement where -> | < 5 > | -> e  
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < i > | | i | <- Has Alphanumeric placement where -> | < 18 > | -> r 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < z > | | z | <- Has Alphanumeric placement where -> | < 1 > | -> a 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < x > | | x | <- Has Alphanumeric placement where -> | < 3 > | -> c 
+[*]  AlphaNumeric Char (Reversed Wrd) (Split) | < h > | | h | <- Has Alphanumeric placement where -> | < 19 > | -> s 
+
+[--+--]  Full Word       ->  [d o g s i r e p a e r c e s e r a c s] 
+[--+--]  Numbers assiged ->  [4 15 7 19 9 18 5 16 1 5 18 3 5 19 5 18 1 3 19]
+then all you do is just reverse that and boom! you have your answer
+so anyway
+your mission
+
+try to find what 15 18 19 22 19 7 13 4 12 23 23 22 16 15 26 4 13 26 14 23 26 8 22 19 7 is in plain text, not its jumbled word but its final key which ends with thehil, find its middle values and tell me the following 
+
+what attack did you use and why? what process did you use etc
+                </div>
+                
+
+              </div><br><br></div></div></div>
