@@ -45,7 +45,7 @@ func file_server(http_writer_M1 http.ResponseWriter, http_request_reader *http.R
 	}
 	switch http_request_reader.Method {
 	case "GET":
-		http.ServeFile(http_writer_M1, http_request_reader, "index/index.html")
+		http.ServeFile(http_writer_M1, http_request_reader, "index.html")
 		fmt.Println(WHT, "\t\t[", BLU, "INFO", WHT, "] \033[34mGET STAT  |=> ", http.StateActive)
 		fmt.Println(WHT, "\t\t[", BLU, "INFO", WHT, "] \033[34mGET STAT  |=> ", http.StatusOK)
 	}
